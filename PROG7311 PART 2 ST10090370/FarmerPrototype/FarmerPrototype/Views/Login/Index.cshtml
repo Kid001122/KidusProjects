@@ -1,0 +1,19 @@
+﻿
+@model LoginModel
+<link href="~/css/site.css" rel="stylesheet" />
+<div class="welcome-container">
+    <h1>Welcome Fill in Your details to Login</h1>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Username)
+    @Html.TextBoxFor(m => m.Username)
+    @Html.ValidationMessageFor(m => m.Username)
+
+    @Html.LabelFor(m => m.Password)
+    @Html.PasswordFor(m => m.Password)
+    @Html.ValidationMessageFor(m => m.Password)
+
+    <input type="submit" value="Login" />
+}
+

@@ -1,0 +1,329 @@
+/* Center align the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+/* Center align the labels */
+label {
+    text-align: center;
+}
+
+/* Center align the validation messages */
+.field-validation-error {
+    text-align: center;
+}
+
+/* Center align the button */
+input[type="submit"] {
+    margin-top: 10px;
+    align-self: center;
+}
+input[type="submit"] {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+    /* Hover styles for the Login button */
+    input[type="submit"]:hover {
+        background-color:wheat;
+    }
+    /*----------------------------------------------------------------------------------*/
+/*index farmer/
+      /* Styles for the table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    /* Styles for table header cells */
+    .table th {
+        text-align: left;
+        background-color: #0094ff;
+        padding: 8px;
+    }
+
+    /* Styles for table data cells */
+    .table td {
+        padding: 28px;
+    }
+
+    /* Styles for alternating row background color */
+    .table tbody tr:nth-child(even) {
+        background-color: wheat;
+    }
+
+    /* Styles for links in the last column */
+    .table td a {
+        margin-right: 15px;
+        color: #333;
+        text-decoration: none;
+    }
+      
+        .table td a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+/* Styles for the "Create New" link */
+.create-link {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+    .create-link:hover {
+        background-color: white;
+    }
+    /*create farmer*/
+/* Styles for the form container */
+.form-container {
+    max-width: 400px;
+    margin-top:10px;
+   
+}
+
+/* Styles for the form labels */
+.form-label {
+    display: block;
+    font-weight: bold;
+   
+        
+    margin-bottom: 10px;
+}
+
+/* Styles for the form input fields */
+.form-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Styles for the form validation error messages */
+.validation-error {
+    color: red;
+}
+
+/* Styles for the form submit button */
+.form-submit-button {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+    .form-submit-button:hover {
+        background-color: #0056b3;
+    }
+
+/* Styles for the "Back to List" link */
+.back-link {
+    display: block;
+    margin-top: 10px;
+}
+/*Delete farmer*/
+/* Styles for the delete container */
+.delete-container {
+    margin-top: 10px;
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 4px;
+}
+
+/* Styles for the delete title */
+.delete-title {
+    margin-top: 10;
+}
+
+/* Styles for the delete confirmation message */
+.delete-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Styles for the delete details */
+.delete-details dt {
+    font-weight: bold;
+}
+
+/* Styles for the delete button */
+.btn-delete {
+    padding: 5px 5px;
+    background-color: #dc3545;
+    color: #fff;
+    margin-top:2px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+    .btn-delete:hover {
+        background-color: #ac2f3f;
+    }
+
+/* Styles for the "Back to List" link */
+.back-link {
+    display: inline-block;
+    margin-top: 3
+    
+   00px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+    .back-link:hover {
+        text-decoration: underline;
+    }
+    /*details css*/
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-sm-2,
+.col-sm-10 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.col-sm-2 {
+    font-weight: bold;
+}
+
+.col-sm-10 {
+    font-style: italic;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+    .actions a {
+        text-decoration: none;
+        margin-right: 10px;
+    }
+/*style for Product index*/
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.action-links a {
+    margin-right: 5px;
+
+}
+/*Login*/
+/* Form container */
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+    /* Label styles */
+    .login-form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Input styles */
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    /* Submit button styles */
+    .login-form input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    /* Validation message styles */
+    .login-form .field-validation-error {
+        color: #f00;
+        margin-top: 5px;
+    }
+
+    .login-form .input-validation-error {
+        border-color: #f00;
+    }
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .login-form {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
+.welcome-container {
+    text-align: center;
+}

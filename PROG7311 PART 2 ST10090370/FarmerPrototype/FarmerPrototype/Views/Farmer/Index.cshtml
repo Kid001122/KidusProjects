@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FarmerPrototype.Models.Farmer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    <link href="@Url.Content("~/wwwroot/css/site.css")" rel="stylesheet" type="text/css"/>
+}
+
+<h1>FARMERS PORTAL</h1>
+
+<p>
+    <a asp-action="Create" class="create-link">CREATE NEW FARMER</a>
+    <a asp-action="Index1" class="create-link">SEE PRODUCTS</a>
+</p>
+<input type="text" id="searchQuery" placeholder="Filter here..."   />
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.FarmerID)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+            <th>@Html.DisplayNameFor(model => model.Surnmae)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>@Html.DisplayNameFor(model => model.Password)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.FarmerID)</td>
+                <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Surnmae)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.Password)</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.FarmerID }) |
+                    @Html.ActionLink("Details", "Details", new {id=item.FarmerID}) |
+                    @Html.ActionLink("Delete", "Delete", new {id=item.FarmerID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script>
+    document.getElementById("searchQuery").addEventListener("input", function () {
+        var filter, table, tr, td, i, txtValue;
+        filter = this.value.toUpperCase();
+        table = document.getElementsByTagName("table")[0];
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1]; // Filter based on the second column (ProductName)
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    });
+</script>

@@ -1,0 +1,98 @@
+﻿@model IEnumerable<FarmerPrototype.Models.Products>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>PRODUCT PAGES</h1>
+
+<p>
+   
+    <a asp-action="Create">Create New</a>
+</p>
+
+<p>
+    
+</p>
+<input type="text" id="searchQuery" placeholder="Filter here by Product Type"   />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamrerID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FamrerID)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.ProductID }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.ProductID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.ProductID })
+            </td>
+        </tr>
+        }
+        
+    </tbody>
+</table>
+<script>
+    document.getElementById("searchQuery").addEventListener("input", function () {
+        var filter, table, tr, td, i, txtValue;
+        filter = this.value.toUpperCase();
+        table = document.getElementsByTagName("table")[0];
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1]; // Filter based on the second column (ProductName)
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    });
+</script>

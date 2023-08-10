@@ -1,0 +1,30 @@
+CREATE TABLE [dbo].[Employee] (
+    [employeeID] VARCHAR (100) NOT NULL,
+    [Name]       VARCHAR (100) NULL,
+    [Surname]    VARCHAR (100) NULL,
+    [Cell]       VARCHAR (100) NULL,
+    [Email]      VARCHAR (100) NULL,
+    [Password]   VARCHAR (100) NULL,
+    PRIMARY KEY CLUSTERED ([employeeID] ASC)
+);
+insert into Employee values('1','MIKEL','ARTETA','0763558789','ARTETA@gmail.com','ARTETA123');
+
+CREATE TABLE [dbo].[Farmer] (
+    [FarmerID]      VARCHAR (100) NOT NULL,
+    [FarmerName]    VARCHAR (100) NULL,
+    [FarmerSurname] VARCHAR (100) NULL,
+    [Email]         VARCHAR (100) NULL,
+    [Password]      VARCHAR (100) NULL,
+    PRIMARY KEY CLUSTERED ([FarmerID] ASC)
+);
+CREATE TABLE [dbo].[ProductTbl] (
+    [ProductID]    VARCHAR (100) NOT NULL,
+    [ProductName]  VARCHAR (100) NULL,
+    [ProductType]  VARCHAR (100) NULL,
+    [Quantity]     VARCHAR (100) NULL,
+    [ProductPrice] VARCHAR (100) NULL,
+    [ProductDate]  VARCHAR (100) NULL,
+    [FarmerID]     VARCHAR (100) NOT NULL,
+    PRIMARY KEY CLUSTERED ([ProductID] ASC),
+    FOREIGN KEY ([FarmerID]) REFERENCES [dbo].[Farmer] ([FarmerID])
+);
